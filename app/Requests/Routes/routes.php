@@ -19,7 +19,7 @@ return [
           'type' => 'post',
           'method' => 'save'
         ],
-        '/update' => [
+        '/update/{id}' => [
           'type' => 'put',
           'method' => 'update'
         ]
