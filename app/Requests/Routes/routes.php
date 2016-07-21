@@ -3,8 +3,28 @@
 return [
   '/users/save' => [
     'type' => 'post',
-    'action' => 'User\UserController',
+    'class' => 'User\UserController',
     'method' => 'save'
+  ],
+  '/users/list' => [
+    'type' => 'get',
+    'class' => 'User\UserController',
+    'method' => 'show'
+  ],
+  '/products' => [
+    'groups' => [
+      'class' => 'ProductsController',
+      'execute' => [
+        '/save' => [
+          'type' => 'post',
+          'method' => 'save'
+        ],
+        '/update' => [
+          'type' => 'put',
+          'method' => 'update'
+        ]
+      ]
+    ]
   ]
 ];
 
